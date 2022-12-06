@@ -128,24 +128,26 @@ video/x-ogm+ogg=mpv.desktop;
 video/x-theora=mpv.desktop;
 video/x-theora+ogg=mpv.desktop;
 x-scheme-handler/about=google-chrome.desktop;
-x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop;
+x-scheme-handler/baiduyunguanjia=baidunetdisk.desktop
 x-scheme-handler/en=evernote-client.desktop
 x-scheme-handler/evernote=evernote-client.desktop
 x-scheme-handler/http=google-chrome.desktop;
 x-scheme-handler/https=google-chrome.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-R4GPV1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-R4GPV1.desktop;
-x-scheme-handler/tg=userapp-Telegram Desktop-F5Q8V1.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-F5Q8V1.desktop;
 x-scheme-handler/unknown=google-chrome.desktop;
-
+inode/directory=nemo.desktop
 [Added Associations]
 application/pdf=org.kde.okular.desktop;
 application/x-shellscript=sublime_text.desktop;
+application/xmind=xmind-2020.desktop;
 image/png=org.gnome.eog.desktop;
-inode/directory=ranger.desktop;
+inode/directory=nemo.desktop;ranger.desktop;
 text/markdown=typora.desktop;
 text/plain=sublime_text.desktop;
 video/x-ms-wmv=vlc.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-R4GPV1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-R4GPV1.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-4AHYU1.desktop;userapp-Telegram Desktop-F5Q8V1.desktop;
+

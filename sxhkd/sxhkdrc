@@ -1,12 +1,11 @@
 # Expand/contract a window by moving one of its side outward/inward
-super + , : {h,j,k,l}
-    STEP=20; SELECTION={1,2,3,4}; \
-    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
-    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION):
+#super + u : {h,j,k,l}
+#    STEP=20; SELECTION={1,2,3,4}; \
+#    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+#    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION):
 
-# switch monitor
 
-# Show clipmenu
+#3lock Show clipmenu
 alt + shift + v
     CM_LAUNCHER=rofi clipmenu \
         -m -1 \
@@ -24,6 +23,8 @@ alt + shift + 3
     flameshot screen -p /home/fry/shots
 alt + shift + 4
     flameshot gui
+alt + shift + 5
+    scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/shots  && dragon -a -x ~/shots/$f'
 # hotkey terminal
 alt + slash
      tdrop -ma -w 99% -h 90% -x 0 -y 31 -s dropdown alacritty
@@ -35,6 +36,11 @@ super + e
 
 alt + shift + grave
     i3lock -c 001122
+alt + shift + 1
+    powermenu
+alt + shift + 2
+    mpc -q pause; systemctl suspend
+#
 #
 # wm independent hotkeys
 #		
@@ -47,11 +53,11 @@ super + Return
 
 # program launcher
 alt + d
-	rofi -monitor -1 -show window
-#alt + space
+	rofi -m -1 -show window
+
 alt + space
-	rofi -monitor -1 -show run
-#	rofi -monitor -1 -show run
+	rofi -m -1 -show run
+#	rofi -m -1 -show run
 
 # make sxhkd reload its configuration files:
 super + r
@@ -87,7 +93,7 @@ super + g
 
 # set the window state
 super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+	bspc node -t {tiled,pseudo_tiled,floating,\~fullscreen}
 
 # set the node flags
 super + ctrl + {m,x,y,z}

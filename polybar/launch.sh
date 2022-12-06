@@ -9,5 +9,7 @@ killall -q polybar
 # 使用polybar中自定义的example (bar/example)
 polybar example 2>&1 | tee -a /tmp/polybar.log & disown
 polybar goddamn 2>&1 | tee -a /tmp/polybar.log & disown
+polybar who 2>&1 | tee -a /tmp/polybar.log & disown
+polybar ami 2>&1 | tee -a /tmp/polybar.log & disown
 
 echo "Polybar launched..."

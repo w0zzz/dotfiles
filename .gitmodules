@@ -1,0 +1,3 @@
+[submodule "ranger/plugins/ranger-zjumper"]
+	path = ranger/plugins/ranger-zjumper
+	url = https://github.com/ask1234560/ranger-zjumper

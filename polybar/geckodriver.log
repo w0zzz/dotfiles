@@ -290,3 +290,17 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://127.0.0.1:36153/devtools/browser/2937fa43-84da-4926-9441-79a2c0abeba5
 console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.sys.mjs", 763))
 console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.sys.mjs", 415))
+1670329817885	geckodriver	INFO	Listening on 127.0.0.1:58169
+1670329817920	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:106.0) Gecko/20100101 Firefox/106.0" "--remote-debugging-port" "47181" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilejQd4cf"
+*** You are running in headless mode.
+1670329818269	Marionette	INFO	Marionette enabled
+1670329818272	Marionette	INFO	Listening on port 44235
+Read port: 44235
+WebDriver BiDi listening on ws://127.0.0.1:47181
+1670329818366	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofilejQd4cf/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:47181/devtools/browser/d8449215-8e7f-47c8-ab9d-04089b6170af
+1670329824535	Marionette	INFO	Stopped listening on port 44235
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
