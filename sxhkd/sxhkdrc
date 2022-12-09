@@ -12,7 +12,7 @@ alt + shift + v
         -no-show-icons \
         -theme-str '* \{ font: 13px; \}' \
         -theme-str 'listview \{ spacing: 0; \}' \
-        -theme-str 'window \{ width: 30em; \}'
+        -theme-str 'window \{ width: 30em; \}'; xdotool key ctrl+shift+v
 
   
 alt + u
@@ -27,14 +27,14 @@ alt + shift + 5
     scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/shots  && dragon -a -x ~/shots/$f'
 # hotkey terminal
 alt + slash
-     tdrop -ma -w 99% -h 90% -x 0 -y 31 -s dropdown alacritty
+     tdrop -ma -w 99% -h 90% -x 0 -y 31 -s dropdown kitty
 
     # bspwm-toggle-visibility alacritty 
 
 super + e
 		bspc node -n 'last.!automatic'
 
-alt + shift + grave
+alt + grave
     i3lock -c 001122
 alt + shift + 1
     powermenu
@@ -49,7 +49,7 @@ alt + shift + 2
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # program launcher
 alt + d

@@ -21,7 +21,7 @@ bspc rule -a Albert state=floating follow=on
 
 # bspc config top_padding 28
 bspc config border_width         3
-bspc config window_gap           9
+bspc config window_gap           3
 bspc config focused_border_color \#00ff00
 
 bspc config split_ratio          0.52
@@ -34,11 +34,12 @@ bspc config gapless_monocle      true
 clipmenud &
 /home/fry/.config/polybar/launch.sh
 dunst &
-feh --bg-fill /home/fry/pics/morn.jpg
+feh --bg-fill /home/fry/pics/bourne.jpg --bg-fill /home/fry/pics/war_child.webp
 # feh --bg-fill /home/fry/pics/girl.jpg --bg-fill /home/fry/pics/earth.jpg
 # feh --bg-fill /home/fry/pics/g3.jpg --bg-fill /home/fry/pics/g2.png
 # feh --bg-fill /home/fry/pics/morn.jpg --bg-fill /home/fry/pics/earth.jpg
 albert &
 megasync &
 picom & 
+caffeine &
 bspc monitor -f next;bspc monitor -f next 
