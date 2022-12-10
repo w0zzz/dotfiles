@@ -4,6 +4,9 @@
 #    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
 #    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION):
 
+super + minus
+    mpv Downloads/videoplayback\ \(7\).mp4  
+
 
 #3lock Show clipmenu
 alt + shift + v
@@ -27,8 +30,12 @@ alt + shift + 5
     scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mv $f ~/shots  && dragon -a -x ~/shots/$f'
 # hotkey terminal
 alt + slash
-     tdrop -ma -w 99% -h 90% -x 0 -y 31 -s dropdown kitty
+     tdrop -ma -w 99% -h 95% -x 0 -y 31 -s dropdown kitty -c /home/fry/.config/kitty/kitty2.conf
 
+# notificatin center
+alt + equal
+    dunstctl history-pop
+    # kill -s USR1 $(pidof deadd-notification-center)
     # bspwm-toggle-visibility alacritty 
 
 super + e
@@ -36,10 +43,12 @@ super + e
 
 alt + grave
     i3lock -c 001122
-alt + shift + 1
+alt + shift + grave
     powermenu
-alt + shift + 2
+alt + shift + 1
     mpc -q pause; systemctl suspend
+alt + shift + 2
+    screen_off
 #
 #
 # wm independent hotkeys
@@ -75,8 +84,10 @@ super + alt + {q,r}
 super + {_,shift + }w
 	bspc node -{c,k}
 
+super + {_,shift + }semicolon
+	bspc node -{c,k}
 # alternate between the tiled and monocle layout
-super + m
+super + f
 	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
@@ -92,8 +103,12 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,\~fullscreen}
+super + {t,shift + t,s}
+	bspc node -t {tiled,pseudo_tiled,floating}
+
+super + m
+    bspc node -t \~fullscreen
+
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -136,8 +151,9 @@ super + shift + bracket{left,right}
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
-alt + tab
+alt + Tab
     bspc node -f last
+    
 # focus the older or newer node in the focus history
 super + {comma,period}
 	bspc wm -h off; \
@@ -149,6 +165,7 @@ super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}' --follow
 super + shift + ctrl + {1-9,0}
     bspc node -d '^{1-9,10}'
+
 super + i
     bspc monitor -f next
 super + {_,shift + } o

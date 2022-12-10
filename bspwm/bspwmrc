@@ -32,14 +32,16 @@ bspc config gapless_monocle      true
 
 # suck
 clipmenud &
-/home/fry/.config/polybar/launch.sh
-dunst &
-feh --bg-fill /home/fry/pics/bourne.jpg --bg-fill /home/fry/pics/war_child.webp
-# feh --bg-fill /home/fry/pics/girl.jpg --bg-fill /home/fry/pics/earth.jpg
-# feh --bg-fill /home/fry/pics/g3.jpg --bg-fill /home/fry/pics/g2.png
-# feh --bg-fill /home/fry/pics/morn.jpg --bg-fill /home/fry/pics/earth.jpg
+~/.config/polybar/launch.sh
+# dunst &
+feh --bg-fill ~/pics/bourne.jpg --bg-fill ~/pics/war_child.webp
+# feh --bg-fill ~/pics/girl.jpg --bg-fill ~/pics/earth.jpg
+# feh --bg-fill ~/pics/g3.jpg --bg-fill ~/pics/g2.png
+# feh --bg-fill ~/pics/morn.jpg --bg-fill ~/pics/earth.jpg
 albert &
 megasync &
 picom & 
+conky &
+conky -c ~/.config/conky/beer.conf &
 caffeine &
 bspc monitor -f next;bspc monitor -f next 
