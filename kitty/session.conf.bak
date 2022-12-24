@@ -1,0 +1,7 @@
+
+
+new_tab kitty
+layout splits
+cd /home/fry/proj/flyjet
+launch /usr/bin/zsh
+launch python

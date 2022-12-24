@@ -34,7 +34,7 @@ bspc config gapless_monocle      true
 clipmenud &
 ~/.config/polybar/launch.sh
 # dunst &
-feh --bg-fill ~/pics/bourne.jpg --bg-fill ~/pics/war_child.webp
+feh --bg-fill ~/pics/mountain_road.jpg --bg-fill ~/pics/white_mountain.jpg
 # feh --bg-fill ~/pics/girl.jpg --bg-fill ~/pics/earth.jpg
 # feh --bg-fill ~/pics/g3.jpg --bg-fill ~/pics/g2.png
 # feh --bg-fill ~/pics/morn.jpg --bg-fill ~/pics/earth.jpg

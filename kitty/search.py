@@ -49,8 +49,8 @@ class Search(Handler):
         self.error = error
         self.line_edit = LineEdit()
         last_search = cached_values.get('last_search', '')
-        self.line_edit.add_text(last_search)
-        self.text_marked = bool(last_search)
+        # self.line_edit.add_text(last_search)
+        # self.text_marked = bool(last_search)
         self.mode = cached_values.get('mode', 'text')
         self.update_prompt()
         self.mark()

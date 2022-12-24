@@ -34,15 +34,15 @@ alt + slash
 
 # notificatin center
 alt + equal
-    dunstctl history-pop
-    # kill -s USR1 $(pidof deadd-notification-center)
+    kill -s USR1 $(pidof deadd-notification-center)
+    # dunstctl history-pop
     # bspwm-toggle-visibility alacritty 
 
 super + e
 		bspc node -n 'last.!automatic'
 
 alt + grave
-    i3lock -c 001122
+    i3lock
 alt + shift + grave
     powermenu
 alt + shift + 1
