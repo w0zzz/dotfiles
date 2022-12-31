@@ -285,10 +285,13 @@ cursor:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux"
+#    - "tmux attach || tmux"
 
 # Startup directory
 #
@@ -603,6 +606,7 @@ key_bindings:
   - { key: C,     mods: Alt,                        action: Copy          }
   - { key: J,     mods: Alt,                        chars: "ps aux | grep " }
   - { key: K,     mods: Alt,                        chars: "\x0c"  }
+  - { key: I,     mods: Alt,                        chars: "clear\n"  }
   - { key: N,     mods: Alt,                        chars: "netstat -pantu\n"  }
   - { key: O,     mods: Alt,                        chars: "dia\n"  }
   - { key: H,     mods: Alt,                        chars: "echo -n `pwd`|xsel --clipboard\n"  }

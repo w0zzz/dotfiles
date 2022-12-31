@@ -5,7 +5,7 @@
 #    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION):
 
 super + minus
-    mpv Downloads/videoplayback\ \(7\).mp4  
+    mpv Downloads/Fight Club Soundtrack - Single Serving Jack EDIT.mp4
 
 
 #3lock Show clipmenu
@@ -69,9 +69,13 @@ alt + space
 #	rofi -m -1 -show run
 
 # make sxhkd reload its configuration files:
-super + r
-	pkill -USR1 -x sxhkd
+#	pkill -USR1 -x sxhkd
+#
+super + shift + r
+    pkill -USR1 -x sxhkd
 
+super + r
+	bspc node -s newest.marked 
 #
 # bspwm hotkeys
 #
